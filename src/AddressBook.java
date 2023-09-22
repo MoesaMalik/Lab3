@@ -1,8 +1,8 @@
-import java.util.LinkedList;
+import java.util.ArrayList;
 
 public class AddressBook {
 
-    private LinkedList<BuddyInfo> addressBook;
+    private ArrayList<BuddyInfo> buddies;
 
     public static void main(String[] args){
             BuddyInfo buddy = new BuddyInfo("Tom", "Carleton","613");
@@ -11,14 +11,16 @@ public class AddressBook {
             addressBook.removeBuddy(buddy);
     }
     public AddressBook(){
-        addressBook = new LinkedList<>();
+        buddies = new ArrayList<>();
     }
     public void addBuddy(BuddyInfo buddy){
-        addressBook.add(buddy);
+        if(buddy != null)
+            buddies.add(buddy);
     }
 
-    public void removeBuddy(BuddyInfo buddy){
-        addressBook.remove(buddy);
+    public boolean removeBuddy(BuddyInfo buddy){
+
+        return buddies.remove(buddy);
     }
 
 }
