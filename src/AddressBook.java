@@ -20,7 +20,7 @@ public class AddressBook {
 
     public boolean removeBuddy(BuddyInfo buddy){
 
-        return buddies.remove(buddy);
+        return buddies.remove(buddy); //re
     }
 
 }
