@@ -18,6 +18,10 @@ public class AddressBook {
             buddies.add(buddy);
     }
 
+    public boolean buddyHere(BuddyInfo buddy){
+
+        return true;
+    }
     public boolean removeBuddy(BuddyInfo buddy){
 
         return buddies.remove(buddy); //re
